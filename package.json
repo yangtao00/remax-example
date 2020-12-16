@@ -1,0 +1,80 @@
+{
+  "name": "health-baas",
+  "private": true,
+  "version": "0.1.10",
+  "scripts": {
+    "dev": "remax build -t wechat -w"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged",
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  },
+  "lint-staged": {
+    "*.{js,jsx,less,md,json}": [
+      "prettier --write"
+    ],
+    "*.ts?(x)": [
+      "prettier --parser=typescript --write"
+    ]
+  },
+  "dependencies": {
+    "@better-scroll/core": "^2.0.0-beta.6",
+    "@doctorwork/one": "^0.1.13",
+    "@doctorwork/one-pro": "0.1.8",
+    "@doctorwork/themes": "^0.1.4",
+    "@doctorwork/utils": "0.0.3",
+    "@doctorwork/web-report-sdk": "^1.5.0",
+    "@types/react": "^16.9.43",
+    "@umijs/preset-react": "1.x",
+    "@umijs/test": "^3.1.1",
+    "antd-mobile": "^2.3.1",
+    "classnames": "^2.2.6",
+    "dayjs": "^1.8.25",
+    "eruda": "^2.3.3",
+    "js-cookie": "^2.2.1",
+    "lib-flexible": "^0.3.2",
+    "one-plugin": "^0.0.3",
+    "qrcode.react": "^1.0.0",
+    "qx-plugin": "^0.1.6",
+    "react": "^16.12.0",
+    "react-activation": "^0.5.0",
+    "react-countdown": "^2.2.1",
+    "react-dom": "^16.12.0",
+    "react-keep-alive": "^2.5.2",
+    "react-photoswipe": "^1.3.0",
+    "react-rating": "^2.0.5",
+    "remax": "2.7.8",
+    "rmc-notification": "^1.0.0",
+    "swiper": "^5.4.5",
+    "timeago.js": "^4.0.2",
+    "umi": "^3.1.4",
+    "umi-request": "^1.2.19",
+    "walkway.js": "^0.0.9",
+    "weixin-js-sdk": "^1.4.0-test",
+    "yorkie": "^2.0.0"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^8.3.5",
+    "@commitlint/config-conventional": "^8.3.4",
+    "@remax/plugin-less": "^1.0.0",
+    "@types/node": "^13.11.1",
+    "@typescript-eslint/eslint-plugin": "^4.1.1",
+    "@typescript-eslint/parser": "^4.1.1",
+    "cross-env": "^7.0.2",
+    "eslint-config-umi": "^1.6.0",
+    "html-webpack-tags-plugin": "^2.0.17",
+    "husky": "^4.2.5",
+    "less-loader": "^5.0.0",
+    "less-vars-to-js": "^1.3.0",
+    "lint-staged": "^10.0.7",
+    "mockjs": "^1.1.0",
+    "postcss-px2rem-exclude": "0.0.6",
+    "postcss-pxtorem": "^5.1.1",
+    "postcss-url": "^8.0.0",
+    "prettier": "^1.19.1",
+    "standard-changelog": "^2.0.24"
+  },
+  "jest": {}
+}
